@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+
+
+  name: test-jbo
+  namespace: coder
+spec:
+  template:
+    spec:
+      containers:
+      - name: test-container
+        image: perl
+        command: ["perl", "-Mbignum=bpi", "-wle", "print bpi(2000)"]
+      restartPolicy: Never
+
+
+
+ 
+
+
+
+
+
+
+
+
+
